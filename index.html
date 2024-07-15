@@ -11,18 +11,21 @@
     <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/45742783.js"></script>
     <script type="text/javascript" id="hs-lambda-script-loader" src="//45742783.fs1.hubspotusercontent-na1.net/hubfs/45742783/hubspot-lambda-client/index.js"></script>
     <script type="text/javascript">
-        var tracking_id=38209952312;
+       // Input: Provide false, or blank string to ignore tracking
+        var tracking_id="RT1234567890";
 
         // Tracking
-        document.addEventListener('DOMContentLoaded', function() {
-          ensure_id_to_tying(tracking_id).then(function() {
-              var _hsq = window._hsq = window._hsq || [];
-              _hsq.push(["identify", {
-                  id: tracking_id
-              }]);
-              _hsq.push(['trackPageView']);
+        if (tracking_id) {
+          document.addEventListener('DOMContentLoaded', function() {
+            ensure_id_to_tying(tracking_id).then(function() {
+                var _hsq = window._hsq = window._hsq || [];
+                _hsq.push(["identify", {
+                    id: tracking_id
+                }]);
+                _hsq.push(['trackPageView']);
+            });          
           });
-        });
+        }
     </script>
     <!-- End of HubSpot Embed Code -->
 </body>
