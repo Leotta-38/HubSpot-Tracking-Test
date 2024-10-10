@@ -9,30 +9,14 @@
     <h1>Tracking Testing Page</h1>
 <!-- Start of HubSpot Embed Code -->
     <script type="text/javascript" id="hs-script-loader" src="//js.hs-scripts.com/45742783.js"></script>
-    <script type="text/javascript" id="hs-lambda-script-loader" src="//45742783.fs1.hubspotusercontent-na1.net/hubfs/45742783/hubspot-lambda-client/index.js"></script>
     <script type="text/javascript">
-        // Provide false or empty string if the website visiter is not logged-in
-        var tracking_id="C67258765";
-
-        // Tracking
-        if (tracking_id) {
-          var track = function() {
-            ensure_id_to_tying(tracking_id).then(function() {
-                var _hsq = window._hsq = window._hsq || [];
-                _hsq.push(["identify", {
-                    id: tracking_id
-                }]);
-                _hsq.push(['trackPageView']);
-            });
-          };
-          if (!ensure_id_to_tying) {
-            document.addEventListener('DOMContentLoaded', track);
-          } 
-          else {
-            track();
-          }
-        }
+        var tracking_id="C00073365";
+        var _hsq = window._hsq = window._hsq || [];
+        _hsq.push(["identify", {
+            id: tracking_id
+        }]);
+        _hsq.push(['trackPageView']);
     </script>
-    <!-- End of HubSpot Embed Code -->
+<!-- End of HubSpot Embed Code -->
 </body>
 </html>
