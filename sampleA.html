@@ -5,61 +5,15 @@
   <title>Link Click Tracking Demo</title>
   <!-- Start of HubSpot Embed Code -->
     <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/44476543.js"></script>
-    <script type="text/javascript">
-        var hstrack = window.hstrack = window.hstrack || {};
-        hstrack.email = "ryo.tajiri@sazae.com.au";
-        hstrack.ready = true;
-        hstrack.queue.push(['trackPageView']);
-
-        document.addEventListener('click', function(event) {
-          var linkExtension = event.target.href.split('.').pop().toLowerCase();
-          if (event.target.tagName === 'A' && linkExtension === 'pdf') { 
-            hstrack.call(['trackEvent', {
-              id: 'pdf_download',
-              value: event.target.href
-            }]);
-          }
-        });
-    </script>
     <!-- End of HubSpot Embed Code --></head>
 <body>
-  <a href="/beta-docs/reference/api/analytics-and-events/tracking-code#tracking-custom-behavioral-events-marketing-hub-enterprise-only" tabindex="0" aria-disabled="false">Tracking custom behavioral events (Marketing Hub Enterprise only)</a>
   <h1>Click on the links below to track link clicks:</h1>
 
-  <a href="https://45941726.fs1.hubspotusercontent-na1.net/hubfs/45941726/pdf/TEST_PDF_Files1.pdf">PDF File 1</a><br>
-  <a href="https://45941726.fs1.hubspotusercontent-na1.net/hubfs/45941726/pdf/TEST_PDF_Files2.pdf">PDF File 2</a><br>
-  <a href="https://45941726.fs1.hubspotusercontent-na1.net/hubfs/45941726/pdf/TEST_PDF_Files3.pdf">PDF File 3</a><br>
+  <a href="https://45941726.fs1.hubspotusercontent-na1.net/hubfs/45941726/pdf/TEST_PDF_Files1.pdf" onclick="_hsq.push(['trackEvent', { id: 'pdf_click', value: 'PDF1' }]);">PDF File 1</a><br>
+  <a href="https://45941726.fs1.hubspotusercontent-na1.net/hubfs/45941726/pdf/TEST_PDF_Files2.pdf" onclick="_hsq.push(['trackEvent', { id: 'pdf_click', value: 'PDF1' }]);">PDF File 2</a><br>
+  <a href="https://45941726.fs1.hubspotusercontent-na1.net/hubfs/45941726/pdf/TEST_PDF_Files3.pdf" onclick="_hsq.push(['trackEvent', { id: 'pdf_click', value: 'PDF1' }]);">PDF File 3</a><br>
 
-<pre>
-<code class="language-html">
-    &lt;!-- Start of HubSpot Embed Code --&gt;
-    &lt;script type=&quot;text/javascript&quot; id=&quot;hs-script-loader&quot; src=&quot;//js.hs-scripts.com/45742783.js&quot;&gt;&lt;/script&gt;
-    &lt;script type=&quot;text/javascript&quot; id=&quot;hs-lambda-script-loader&quot; src=&quot;//45742783.fs1.hubspotusercontent-na1.net/hubfs/45742783/lambda3-lambda-client/index.js&quot;&gt;&lt;/script&gt;
-    &lt;script type=&quot;text/javascript&quot;&gt;
-        // Input: Provide false, or blank string to ignore tracking
-        var hstrack = window.hstrack = window.hstrack || {};
-        hstrack.tracking_id = &quot;C00116030&quot;;
-        hstrack.ready = true;
-        hstrack.queue.push(['trackPageView']);
 
-        document.addEventListener('click', function(event) {
-          var linkExtension = event.target.href.split('.').pop().toLowerCase();
-          if (event.target.tagName === 'A' &amp;&amp; linkExtension === 'pdf') { 
-            hstrack.call(['trackEvent', {
-              id: 'pdf_download',
-              value: event.target.href
-            }]);
-          }
-        });
-    &lt;/script&gt;
-    &lt;!-- End of HubSpot Embed Code --&gt;</code>
-</pre>
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.css">
-<script src="https://cdn.jsdelivr.net/npm/prismjs"></script>
-<script>
-    Prism.highlightAll();
-</script>
 </body>
 </html>
 
